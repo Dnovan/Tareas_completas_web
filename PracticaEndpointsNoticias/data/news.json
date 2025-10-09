@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "categoria_id": 1,
+    "estado_id": 1,
+    "usuario_id": 1,
+    "titulo": "Famoso actor se retira del cine",
+    "fecha_publicacion": "2023-06-17",
+    "description": "El reconocido actor anunció su retiro tras 30 años de carrera.",
+    "image": "base64stringaqui",
+    "activo": true,
+    "UserAlta": "JuanXG",
+    "FechaAlta": "2023-06-27 12:00:00:000",
+    "UserMod": "JuanXG",
+    "FechaMod": "2023-06-27 12:00:00:000",
+    "UserBaja": null,
+    "FechaBaja": null
+  },
+  {
+    "id": 2,
+    "categoria_id": 2,
+    "estado_id": 2,
+    "usuario_id": 2,
+    "titulo": "Equipo local gana el campeonato",
+    "fecha_publicacion": "2023-07-02",
+    "description": "El equipo de Quintana Roo se coronó campeón tras una final emocionante.",
+    "image": "base64stringaqui",
+    "activo": true,
+    "UserAlta": "MariaL",
+    "FechaAlta": "2023-07-02 09:00:00:000",
+    "UserMod": "MariaL",
+    "FechaMod": "2023-07-02 09:00:00:000",
+    "UserBaja": null,
+    "FechaBaja": null
+  },
+  {
+    "id": 3,
+    "categoria_id": 3,
+    "estado_id": 3,
+    "usuario_id": 2,
+    "titulo": "Nuevo smartphone revoluciona el mercado",
+    "fecha_publicacion": "2023-07-03",
+    "description": "Una empresa tecnológica lanza un teléfono con características innovadoras.",
+    "image": "base64stringaqui",
+    "activo": true,
+    "UserAlta": "MariaL",
+    "FechaAlta": "2023-07-03 10:00:00:000",
+    "UserMod": "MariaL",
+    "FechaMod": "2023-07-03 10:00:00:000",
+    "UserBaja": null,
+    "FechaBaja": null
+  }
+]

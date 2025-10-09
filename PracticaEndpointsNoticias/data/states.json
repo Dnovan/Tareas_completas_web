@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nombre": "Yucatán",
+    "abreviacion": "YUC",
+    "activo": true,
+    "UserAlta": "JuanXG",
+    "FechaAlta": "2023-06-27 12:00:00:000",
+    "UserMod": "JuanXG",
+    "FechaMod": "2023-06-27 12:00:00:000",
+    "UserBaja": null,
+    "FechaBaja": null
+  },
+  {
+    "id": 2,
+    "nombre": "Quintana Roo",
+    "abreviacion": "QROO",
+    "activo": true,
+    "UserAlta": "JuanXG",
+    "FechaAlta": "2023-06-27 12:00:00:000",
+    "UserMod": "JuanXG",
+    "FechaMod": "2023-06-27 12:00:00:000",
+    "UserBaja": null,
+    "FechaBaja": null
+  },
+  {
+    "id": 3,
+    "nombre": "Campeche",
+    "abreviacion": "CAMP",
+    "activo": true,
+    "UserAlta": "JuanXG",
+    "FechaAlta": "2023-06-27 12:00:00:000",
+    "UserMod": "JuanXG",
+    "FechaMod": "2023-06-27 12:00:00:000",
+    "UserBaja": null,
+    "FechaBaja": null
+  }
+]

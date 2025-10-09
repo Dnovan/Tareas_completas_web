@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nombre": "Farandula",
+    "descripcion": "Todo acerca del mundo del espectáculo",
+    "activo": true,
+    "UserAlta": "JuanXG",
+    "FechaAlta": "2023-06-27 12:00:00:000",
+    "UserMod": "JuanXG",
+    "FechaMod": "2023-06-27 12:00:00:000",
+    "UserBaja": null,
+    "FechaBaja": null
+  },
+  {
+    "id": 2,
+    "nombre": "Deportes",
+    "descripcion": "Noticias deportivas locales e internacionales",
+    "activo": true,
+    "UserAlta": "JuanXG",
+    "FechaAlta": "2023-06-28 12:00:00:000",
+    "UserMod": "JuanXG",
+    "FechaMod": "2023-06-28 12:00:00:000",
+    "UserBaja": null,
+    "FechaBaja": null
+  },
+  {
+    "id": 3,
+    "nombre": "Tecnología",
+    "descripcion": "Avances tecnológicos y gadgets",
+    "activo": true,
+    "UserAlta": "MariaL",
+    "FechaAlta": "2023-06-30 08:00:00:000",
+    "UserMod": "MariaL",
+    "FechaMod": "2023-06-30 08:00:00:000",
+    "UserBaja": null,
+    "FechaBaja": null
+  }
+]

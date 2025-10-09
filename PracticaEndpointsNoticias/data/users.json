@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "profile_id": 1,
+    "nombres": "Juan",
+    "apellidos": "Martinez del Olmo",
+    "nick": "JuanXG",
+    "correo": "juan123@gmail.com",
+    "contraseña": "123456",
+    "activo": true,
+    "UserAlta": "JuanXG",
+    "FechaAlta": "2023-06-27 12:00:00:000",
+    "UserMod": "JuanXG",
+    "FechaMod": "2023-06-27 12:00:00:000",
+    "UserBaja": "JuanXG",
+    "FechaBaja": "2023-06-27 12:00:00:000"
+  }
+]

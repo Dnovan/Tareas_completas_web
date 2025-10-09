@@ -1,0 +1,20 @@
+{
+  "name": "practicaendpointsnoticias",
+  "version": "1.0.0",
+  "description": "API de práctica con ExpressJS para manejar noticias, usuarios, estados y categorías.",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
