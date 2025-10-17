@@ -1,13 +1,9 @@
-var express = require('express');
-const {get, getById, create, update, destroy}  = require('../controllers/CategoryController');
-const { validatorCategoryCreate, validatorCategoryUpdate } = require('../validators/CategoryValidator');
+const express = require('express');
+const router = express.Router();
+const { get, create } = require('../controllers/CategoryController'); // Asumiendo que solo tienes estas
+const { authenticateAdmin } = require('../middlewares/jwt');
 
-const api = express.Router();
+router.get('/categorias', get); // Ver es para todos
+router.post('/categorias', authenticateAdmin, create); // Crear es solo para el puto JEFE
 
-api.get('/categorias', get);
-api.get('/categorias/:id', getById);
-api.post('/categorias', validatorCategoryCreate, create);
-api.put('/categorias/:id', validatorCategoryUpdate, update);
-api.delete('/categorias/:id', destroy);
-
-module.exports = api;
+module.exports = router;

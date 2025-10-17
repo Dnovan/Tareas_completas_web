@@ -1,46 +1,41 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const cors = require('cors');
+const { PORT } = require("./config");
 
-// Conexión a la base de datos (esta línea debe ir antes de las rutas)
+// Middlewares
+app.use(cors());
+app.use(express.json({ limit: '50mb' }));
+
+// Conexión a la DB
 require('./config.db.js');
-
-// Middleware para que la API entienda JSON
-app.use(express.json());
-
 
 // ===============================================
 //           CARGA DE RUTAS
 // ===============================================
-// Cargamos los archivos de rutas tal como se llaman en tu carpeta "routes".
-
-const state_routes = require('./routes/StateRoute.js');
-const category_routes = require('./routes/CategoryRoute.js');
-const new_routes = require('./routes/NewRoute.js');
-const user_routes = require('./routes/UserRoute.js');
-
-// Esta es la ruta para perfiles que sí existe en tu proyecto
-const profileRoutes = require('./routes/profiles.routes.js'); 
-
+const profileRoutes = require('./routes/profiles.routes.js');
+const authRoutes = require('./routes/AuthRoute.js');
+const stateRoutes = require('./routes/StateRoute.js');
+const categoryRoutes = require('./routes/CategoryRoute.js');
+const newRoutes = require('./routes/NewRoute.js');
+const userRoutes = require('./routes/UserRoute.js');
 
 // ===============================================
-//              USO DE RUTAS
+//              USO DE RUTAS (LA FORMA A PRUEBA DE PENDEJOS)
 // ===============================================
-// Le decimos a la aplicación qué rutas usar y bajo qué prefijo de URL.
-
-// Usamos la ruta específica para perfiles bajo el endpoint /api/profiles
+// CADA PUTA RUTA CON SU PROPIO PUTO PREFIJO. NO HAY PUTO PEDO.
 app.use('/api/profiles', profileRoutes);
-
-// Agrupamos el resto de las rutas bajo el prefijo general /api
-// Por ejemplo: /api/estados, /api/categorias, etc.
-app.use('/api', state_routes, category_routes, new_routes, user_routes);
-
+app.use('/api/auth', authRoutes);
+app.use('/api/states', stateRoutes);
+app.use('/api/categories', categoryRoutes);
+app.use('/api/news', newRoutes);
+app.use('/api/users', userRoutes);
 
 // ===============================================
 //              INICIAR SERVIDOR
 // ===============================================
 app.listen(PORT, () => {
-    console.log(`Servidor escuchando en el puerto ${PORT}`);
+    console.log(`¡A JALAR, PENDEJO! Servidor corriendo en el puerto ${PORT}`);
 });
 
 module.exports = app;

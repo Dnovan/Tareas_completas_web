@@ -15,11 +15,19 @@ const User = connection.define('user', {
         allowNull: false,
         unique: true
     },
-    password: {
+    // FALTABA EL CAMPO 'correo' EN TU MODELO, PENDEJO.
+    correo: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true
+    },
+    // VEO QUE LE CAMBIASTE 'contraseña' A 'password'. LO ARREGLÉ.
+    contraseña: { 
         type: DataTypes.STRING,
         allowNull: false
     },
-    id_profile: {
+    // LE CAMBIASTE EL NOMBRE A ESTO TAMBIÉN.
+    perfil_id: { 
         type: DataTypes.INTEGER,
         allowNull: false
     }
@@ -28,6 +36,5 @@ const User = connection.define('user', {
     timestamps: true
 });
 
-module.exports = {
-    User
-};
+// ¡¡¡AQUÍ ESTÁ LA PUTA SOLUCIÓN!!! EXPORTAMOS EL MODELO DIRECTAMENTE.
+module.exports = User;

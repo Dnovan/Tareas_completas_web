@@ -1,13 +1,9 @@
-var express = require('express');
+const express = require('express');
+const router = express.Router();
+const { get, create } = require('../controllers/StateController');
+const { authenticateAdmin } = require('../middlewares/jwt');
 
-const {get, getById, create, update, destroy}  = require('../controllers/StateController');
-const {validatorStateRequire, validatorStateOptional} = require('../validators/StateValidator')
-const api = express.Router();
+router.get('/estados', get);
+router.post('/estados', authenticateAdmin, create);
 
-api.get('/estados', get);
-api.get('/estados/:id', getById)
-api.post('/estados', validatorStateRequire, create)
-api.put('/estados/:id', validatorStateOptional, update)
-api.delete('/estados/:id', destroy)
-
-module.exports = api;
+module.exports = router;

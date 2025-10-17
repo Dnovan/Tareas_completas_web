@@ -1,13 +1,9 @@
 const express = require('express');
-const { get, getById, create, update, destroy } = require('../controllers/NewController');
-const { validatorNewCreate, validatorNewUpdate } = require('../validators/NewValidator');
+const router = express.Router();
+const { get, create } = require('../controllers/NewController');
+const { authenticateAny } = require('../middlewares/jwt');
 
-const api = express.Router();
+router.get('/noticias', get); // Todos pueden ver
+router.post('/noticias', authenticateAny, create); // CUALQUIERA con un token válido puede crear
 
-api.get('/noticias', get);
-api.get('/noticias/:id', getById);
-api.post('/noticias', validatorNewCreate, create);
-api.put('/noticias/:id', validatorNewUpdate, update);
-api.delete('/noticias/:id', destroy);
-
-module.exports = api;
+module.exports = router;

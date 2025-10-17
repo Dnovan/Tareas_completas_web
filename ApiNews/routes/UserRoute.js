@@ -1,13 +1,10 @@
-var express = require('express');
-const { get, getById, create, update, destroy } = require('../controllers/UserController');
-const { validatorUserCreate, validatorUserUpdate } = require('../validators/UserValidator');
+const express = require('express');
+const router = express.Router();
+const { get, getById } = require('../controllers/UserController');
+const { authenticateAdmin } = require('../middlewares/jwt');
 
-const api = express.Router();
+// Para ver a TODOS los usuarios, o a UNO, tienes que ser el ADMIN
+router.get('/usuarios', authenticateAdmin, get);
+router.get('/usuarios/:id', authenticateAdmin, getById);
 
-api.get('/usuarios', get);
-api.get('/usuarios/:id', getById);
-api.post('/usuarios', validatorUserCreate, create);
-api.put('/usuarios/:id', validatorUserUpdate, update);
-api.delete('/usuarios/:id', destroy);
-
-module.exports = api;
+module.exports = router;
